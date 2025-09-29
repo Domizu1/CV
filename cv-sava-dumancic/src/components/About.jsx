@@ -43,7 +43,7 @@ function About() {
                <span>
                 <img src={book} alt="book-icon" className="w-7 h-7 align-middle"/>
                </span>
-                <p>Comics&Books</p>
+                <p>Comics & Books</p>
             </div>
             <div className="flex items-center gap-2 bg-black/30 rounded-xl px-3 py-2">
                <span>
