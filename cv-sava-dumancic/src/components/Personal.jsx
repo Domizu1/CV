@@ -1,12 +1,20 @@
 import coursesImg from '../assets/coursesvg.svg'
 import educationImg from '../assets/educationsvg.svg'
 import languageImg from '../assets/speaksvg.svg'
+import {motion} from 'framer-motion'
 
 
 function Personal(){
     return(
     <div>
-        <h2 className='text-white text-center text-2xl font-semibold mb-6 mt-4 tracking-[8px]'>Personal Info</h2>
+        <motion.h2 className='text-white text-center text-2xl font-semibold mb-6 mt-4 tracking-[8px]'
+            initial={{opacity: 0, x: -100, filter: "blur(4px)"}}
+            animate={{opacity: 1, x: 0, filter: "blur(0px)"}}
+            transition={{
+                duration: 0.8,
+                ease: "easeOut"
+            }}
+        >Personal Info</motion.h2>
         <div className="flex text-white mt-6 gap-10">
             <div className="bg-[#384358] rounded-xl w-full min-h-[140px] p-5">
                 <div className='flex items-center gap-2'>

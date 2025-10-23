@@ -5,6 +5,7 @@ import plane from "../assets/plane.svg"
 import run from "../assets/runner.svg"
 import astronomy from "../assets/astronomy.svg"
 import coffee from "../assets/coffee.svg"
+import { motion } from "framer-motion"
 
 function About() {
   return (
@@ -18,21 +19,70 @@ function About() {
       </div>
 
       <div className="flex flex-col gap-6">
-        <div className="text-[#C7C9D9] bg-[#384358] w-[550px] p-5 rounded-2xl">
-          <p className="leading-relaxed">
+        <motion.div className="text-[#C7C9D9] bg-[#384358] w-[550px] p-5 rounded-2xl"
+            initial={{ opacity: 0, x:-100, filter: "blur(10px)" }}
+              animate={{ opacity: 1, x:0, filter: "blur(0px)" }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+                delay: 0.8,
+              }}
+        >
+          <motion.p className="leading-relaxed"
+              initial={{ opacity: 0, filter: "blur(10px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+                delay: 1.2,
+              }}
+            >
             I am a Frontend Developer with solid knowledge of JavaScript, HTML,
             and CSS, as well as strong experience in React and modern web
             technologies. My journey in development started with a brief period
             working on backend systems, which gave me a deeper understanding
             of how everything connects behind the scenes.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="bg-[#384358] w-[550px] flex items-center text-[#C7C9D9] rounded-xl p-4 ">
-          <span className="text-[#C7C9D9] font-semibold">Intrests</span>
-          <span className="mx-4 h-15 w-px bg-[#C7C9D9]/50"></span>
+        <motion.div className="bg-[#384358] w-[550px] flex items-center text-[#C7C9D9] rounded-xl p-4"
+          initial={{ opacity: 0, x:300, filter: "blur(10px)" }}
+              animate={{ opacity: 1, x:0, filter: "blur(0px)" }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+                delay: 0.8,
+              }}
+        >
+          <motion.span className="text-[#C7C9D9] font-semibold"
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{
+              duration: 1,
+              ease: "easeOut",
+              delay: 1,
+            }}
+          >
+            Intrests</motion.span>
+          <motion.span className="mx-4 h-15 w-px bg-[#C7C9D9]/50"
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{
+              duration: 1,
+              ease: "easeOut",
+              delay: 1,
+            }}
+          ></motion.span>
 
-          <div className="flex gap-3 flex-wrap">
+          <motion.div className="flex gap-3 flex-wrap"
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{
+              duration: 1,
+              ease: "easeOut",
+              delay: 1,
+            }}
+          >
             <div className="flex items-center gap-2 bg-black/30 rounded-xl px-3 py-2">
                <span>
                 <img src={gym} alt="gym-icon" className="w-7 h-7 align-middle" />
@@ -69,8 +119,8 @@ function About() {
                </span>
                 <p>Coffee</p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   )
