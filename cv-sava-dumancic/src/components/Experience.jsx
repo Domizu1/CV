@@ -1,7 +1,9 @@
 function Experience(){
     return(
         <>
-        <div className=""><h1>Work Experience</h1></div>
+        <div>
+            <h1 className="text-white text-center text-2xl font-semibold mb-6 mt-4 tracking-[8px]">Work Experience</h1>
+        </div>
         <div className="flex justify-between items-start w-full mx-auto gap-6 mt-6">
             <div className="flex-1">
                 <div className="text-white bg-[#384358] rounded-xl w-[450px] h-[300px] p-4">
